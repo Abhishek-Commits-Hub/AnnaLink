@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AnnaLink — Kitchen Operations Dashboard | Green Bowl Kitchen</title>
+  <meta name="description"
+    content="Manage restaurant ingredients, prevent avoidable waste, and coordinate surplus food collections.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <div class="app-container">
+    <!-- Persistent Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <a href="index.html" class="brand-link" id="brandLogoLink">
+          <div class="brand-logo-icon">
+            <!-- Inline SVG Logo: Leaf + Connected Link -->
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
+              <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
+            </svg>
+          </div>
+          <div class="brand-text">
+            <span class="brand-title">AnnaLink</span>
+            <span class="brand-tagline">Connecting Food. Reducing Waste.</span>
+          </div>
+        </a>
+      </div>
+
+      <nav class="sidebar-nav">
+        <div class="nav-section-title">Operations</div>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link active" id="navOverview">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <rect x="3" y="3" width="7" height="9" rx="1"></rect>
+                <rect x="14" y="3" width="7" height="5" rx="1"></rect>
+                <rect x="14" y="12" width="7" height="9" rx="1"></rect>
+                <rect x="3" y="16" width="7" height="5" rx="1"></rect>
+              </svg>
+              <span>Overview</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="menu-mitra.html" class="nav-link" id="navMenuMitra">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path
+                  d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83">
+                </path>
+              </svg>
+              <span>MenuMitra AI</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="connect.html" class="nav-link" id="navConnect">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+              <span>AnnaLink Connect</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="impact.html" class="nav-link" id="navImpact">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path>
+                <path d="M22 12A10 10 0 0 0 12 2v10z"></path>
+              </svg>
+              <span>Impact</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="settings.html" class="nav-link" id="navSettings">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <circle cx="12" cy="12" r="3"></circle>
+                <path
+                  d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+                </path>
+              </svg>
+              <span>Settings</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="sidebar-footer">
+        <a href="settings.html" class="business-profile-card" id="sidebarProfileCard" title="View Business Profile">
+          <div class="business-avatar">GB</div>
+          <div class="business-info">
+            <div class="business-name" id="sidebarBusinessName">Green Bowl Kitchen</div>
+            <div class="business-role">
+              <span class="status-dot"></span>
+              <span>Hirapur, Dhanbad</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main Wrapper -->
+    <div class="main-wrapper">
+      <!-- Top Sticky Header -->
+      <header class="top-header">
+        <div class="header-left">
+          <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle navigation menu">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+          <div class="header-title-wrap">
+            <div class="header-breadcrumb">Kitchen Operations / Overview</div>
+            <h1>Dashboard</h1>
+          </div>
+        </div>
+
+        <div class="header-right">
+          <!-- Notification Bell -->
+          <div class="notification-container">
+            <button class="icon-button" id="notifBtn" aria-label="Notifications" title="Notifications">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+              </svg>
+              <span class="notification-badge" id="notifBadge" style="display:none;">0</span>
+            </button>
+            <div class="dropdown-menu" id="notifMenu">
+              <div class="dropdown-header">
+                <h4>Notifications</h4>
+                <button type="button" id="markReadBtn">Mark all as read</button>
+              </div>
+              <div class="dropdown-body" id="notifList"></div>
+            </div>
+          </div>
+
+          <!-- Account Header Button -->
+          <a href="settings.html" class="header-profile-btn" id="headerProfileBtn">
+            <div class="header-avatar">GB</div>
+            <span class="header-user-name">Green Bowl Kitchen</span>
+          </a>
+
+          <!-- Contextual Primary Action -->
+          <a href="connect.html?action=new" class="btn btn-primary btn-sm" id="btnHeaderNewSurplus">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+            <span>List Surplus</span>
+          </a>
+        </div>
+      </header>
+
+      <!-- Page Content -->
+      <main class="content-area">
+        <!-- Welcome Intro -->
+        <div class="page-intro">
+          <div class="page-intro-text">
+            <h2>Good morning, Restaurant Team</h2>
+            <p>Here's how your kitchen is managing ingredients and surplus food.</p>
+          </div>
+          <div>
+            <span class="reporting-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+              Active Cycle: Oct 8 – Oct 14, 2026
+            </span>
+          </div>
+        </div>
+
+        <!-- Visual Welcome Banner with Custom Food Recovery Illustration -->
+        <div class="illustration-banner">
+          <div class="illustration-banner-content">
+            <h2>Connected Food Logistics for Hirapur Kitchens</h2>
+            <p>Your team has achieved a <strong>76.3% surplus collection rate</strong> across this cycle. Coordinate excess prep, prevent stock waste using MenuMitra, and ensure verified handoffs with local community partners.</p>
+            <div style="display:flex;gap:12px;flex-wrap:wrap;">
+              <a href="menu-mitra.html" class="btn btn-primary btn-sm">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path></svg>
+                Suggest Menu Ideas
+              </a>
+              <a href="connect.html" class="btn btn-secondary btn-sm">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg>
+                Surplus Dispatch (1 Active)
+              </a>
+            </div>
+          </div>
+          <div class="illustration-banner-image">
+            <img src="assets/kitchen-dashboard.jpg" alt="Kitchen team managing ingredient recovery and community surplus coordination" loading="lazy">
+          </div>
+        </div>
+
+        <!-- 4 KPI Cards -->
+        <section class="kpi-grid">
+          <div class="kpi-card" id="kpiOfferedCard">
+            <div class="kpi-header">
+              <span class="kpi-title">Food Offered</span>
+              <div class="kpi-icon-wrap">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path
+                    d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                  </path>
+                </svg>
+              </div>
+            </div>
+            <div class="kpi-value" id="kpiOfferedVal">186 kg</div>
+            <div class="kpi-subtext">Total quantity listed in active reporting cycle</div>
+          </div>
+
+          <div class="kpi-card" id="kpiCollectedCard">
+            <div class="kpi-header">
+              <span class="kpi-title">Food Collected</span>
+              <div class="kpi-icon-wrap">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+            </div>
+            <div class="kpi-value" id="kpiCollectedVal">142 kg</div>
+            <div class="kpi-subtext">Mutually confirmed handoffs completed</div>
+          </div>
+
+          <div class="kpi-card" id="kpiRateCard">
+            <div class="kpi-header">
+              <span class="kpi-title">Collection Rate</span>
+              <div class="kpi-icon-wrap">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+              </div>
+            </div>
+            <div class="kpi-value" id="kpiRateVal">76.3%</div>
+            <div class="kpi-subtext">
+              <span class="kpi-tag">5 Completed Pickups</span>&nbsp;out of listed lots
+            </div>
+          </div>
+
+          <div class="kpi-card" id="kpiWasteCard">
+            <div class="kpi-header">
+              <span class="kpi-title">Avoided Waste Cost</span>
+              <div class="kpi-icon-wrap">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="12" y1="1" x2="12" y2="23"></line>
+                  <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                </svg>
+              </div>
+            </div>
+            <div class="kpi-value" id="kpiWasteVal">₹12,400</div>
+            <div class="kpi-subtext">Estimated ingredient value recovered from loss</div>
+          </div>
+        </section>
+
+        <!-- Two Column Content Grid -->
+        <div class="dashboard-layout">
+          <!-- Left Column -->
+          <div class="dashboard-main">
+            <!-- 7-Day Activity Chart Card -->
+            <div class="card">
+              <div class="card-header">
+                <div class="card-header-left">
+                  <h3>7-Day Kitchen Surplus & Collection Activity</h3>
+                  <p>Daily volume of surplus listed vs. mutually confirmed handoffs</p>
+                </div>
+                <div class="card-header-right">
+                  <a href="impact.html" class="btn btn-outline btn-sm">Full Report</a>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="chart-container" id="overviewChartContainer">
+                  <!-- SVG Rendered Dynamically via JS -->
+                </div>
+                <div class="chart-legend">
+                  <div class="legend-item">
+                    <span class="legend-color" style="background-color: #287A50;"></span>
+                    <span>Collected (kg)</span>
+                  </div>
+                  <div class="legend-item">
+                    <span class="legend-color" style="background-color: #CBD4CA;"></span>
+                    <span>Offered (kg)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Recent Surplus Activity Card -->
+            <div class="card">
+              <div class="card-header">
+                <div class="card-header-left">
+                  <h3>Recent Surplus Activity</h3>
+                  <p>Current listings and latest handoff updates</p>
+                </div>
+                <div class="card-header-right">
+                  <a href="connect.html" class="btn btn-outline btn-sm">View All in Connect</a>
+                </div>
+              </div>
+              <div class="card-body" style="padding: 0;">
+                <div class="table-responsive">
+                  <table class="data-table" id="recentActivityTable">
+                    <thead>
+                      <tr>
+                        <th>Food Item</th>
+                        <th>Quantity</th>
+                        <th>Status</th>
+                        <th>Receiving Organisation</th>
+                        <th>Pickup Window</th>
+                        <th>Action</th>
+                      </tr>
+                    </thead>
+                    <tbody id="recentActivityBody">
+                      <!-- Rendered by JS -->
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column -->
+          <div class="dashboard-sidebar">
+            <!-- Quick Actions -->
+            <div class="card">
+              <div class="card-header">
+                <div class="card-header-left">
+                  <h3>Quick Actions</h3>
+                  <p>Common kitchen operations</p>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="quick-action-list">
+                  <a href="menu-mitra.html" class="quick-action-btn" id="qaSuggestDishes">
+                    <div class="quick-action-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <path
+                          d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83">
+                        </path>
+                      </svg>
+                    </div>
+                    <div>
+                      <div style="font-weight:600;">Suggest Dishes</div>
+                      <div style="font-size:12px;color:var(--color-text-muted);">Use expiring ingredients with MenuMitra
+                      </div>
+                    </div>
+                  </a>
+
+                  <a href="connect.html?action=new" class="quick-action-btn" id="qaListSurplus">
+                    <div class="quick-action-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                      </svg>
+                    </div>
+                    <div>
+                      <div style="font-weight:600;">List Surplus Food</div>
+                      <div style="font-size:12px;color:var(--color-text-muted);">Coordinate donation with local partners
+                      </div>
+                    </div>
+                  </a>
+
+                  <a href="impact.html" class="quick-action-btn" id="qaViewImpact">
+                    <div class="quick-action-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path>
+                        <path d="M22 12A10 10 0 0 0 12 2v10z"></path>
+                      </svg>
+                    </div>
+                    <div>
+                      <div style="font-weight:600;">View Impact Report</div>
+                      <div style="font-size:12px;color:var(--color-text-muted);">Review outcomes & export summary CSV
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Collection Status Summary -->
+            <div class="card">
+              <div class="card-header">
+                <div class="card-header-left">
+                  <h3>Collection Pipeline</h3>
+                  <p>Current state of listed lots</p>
+                </div>
+              </div>
+              <div class="card-body">
+                <div style="display:flex;flex-direction:column;gap:12px;" id="pipelineSummaryWrap">
+                  <!-- Rendered dynamically -->
+                </div>
+              </div>
+            </div>
+
+            <!-- MenuMitra Active Recommendations -->
+            <div class="card">
+              <div class="card-header">
+                <div class="card-header-left">
+                  <h3>Ingredients to Use Today</h3>
+                  <p>Flagged for prompt kitchen preparation</p>
+                </div>
+              </div>
+              <div class="card-body" id="expiringIngredientsList">
+                <!-- Rendered dynamically -->
+              </div>
+              <div class="card-footer">
+                <span style="font-size:12px;color:var(--color-text-muted);">4 active recommendations</span>
+                <a href="menu-mitra.html" class="btn btn-secondary btn-sm">Launch MenuMitra</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <div id="toastContainer" class="toast-container"></div>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    // Overview Dashboard Logic
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Refresh KPIs from shared data layer
+      const metrics = AnnaLinkData.getMetrics();
+      const profile = AnnaLinkData.getProfile();
+
+      document.getElementById('kpiOfferedVal').textContent = `${metrics.totalOffered} kg`;
+      document.getElementById('kpiCollectedVal').textContent = `${metrics.totalCollected} kg`;
+      document.getElementById('kpiRateVal').textContent = `${metrics.completionRate}%`;
+      document.getElementById('kpiWasteVal').textContent = Formatters.currency(metrics.estimatedValueAvoided);
+
+      const sidebarName = document.getElementById('sidebarBusinessName');
+      if (sidebarName) sidebarName.textContent = profile.name;
+
+      // 2. Render SVG 7-Day Activity Chart
+      renderOverviewChart();
+
+      // 3. Render Recent Surplus Activity
+      renderRecentActivity();
+
+      // 4. Render Collection Pipeline Summary
+      renderPipelineSummary();
+
+      // 5. Render Ingredients Flagged for Today
+      renderFlaggedIngredients();
+    });
+
+    function renderOverviewChart() {
+      const chartEl = document.getElementById('overviewChartContainer');
+      if (!chartEl) return;
+
+      // 7-day data reconciling with our listings:
+      // Oct 8 (28 off / 28 coll), Oct 9 (22 off / 22 coll), Oct 10 (35 off / 35 coll),
+      // Oct 11 (25 off / 25 coll), Oct 12 (32 off / 32 coll), Oct 13 (0 off / 0 coll), Oct 14 (32 off / 0 coll)
+      const days = [
+        { label: 'Wed 8', offered: 28, collected: 28 },
+        { label: 'Thu 9', offered: 22, collected: 22 },
+        { label: 'Fri 10', offered: 35, collected: 35 },
+        { label: 'Sat 11', offered: 25, collected: 25 },
+        { label: 'Sun 12', offered: 32, collected: 32 },
+        { label: 'Mon 13', offered: 12, collected: 0 },
+        { label: 'Tue 14', offered: 32, collected: 0 }
+      ];
+
+      const maxVal = 40;
+      const chartWidth = 500;
+      const chartHeight = 160;
+      const barWidth = 18;
+      const groupSpacing = chartWidth / days.length;
+
+      let barsSvg = '';
+      days.forEach((day, index) => {
+        const xCenter = index * groupSpacing + groupSpacing / 2;
+        const offHeight = (day.offered / maxVal) * chartHeight;
+        const colHeight = (day.collected / maxVal) * chartHeight;
+
+        const offY = chartHeight - offHeight;
+        const colY = chartHeight - colHeight;
+
+        barsSvg += `
+          <!-- Group: ${day.label} -->
+          <g>
+            <!-- Offered bar (greyish green) -->
+            <rect x="${xCenter - barWidth - 2}" y="${offY}" width="${barWidth}" height="${offHeight}" rx="4" fill="#CBD4CA" />
+            
+            <!-- Collected bar (forest green) -->
+            <rect x="${xCenter + 2}" y="${colY}" width="${barWidth}" height="${colHeight}" rx="4" fill="#287A50" />
+            
+            <!-- Day Label -->
+            <text x="${xCenter}" y="${chartHeight + 20}" font-size="11" fill="#6B756D" text-anchor="middle" font-family="system-ui">${day.label}</text>
+          </g>
+        `;
+      });
+
+      chartEl.innerHTML = `
+        <svg class="chart-svg" viewBox="0 0 ${chartWidth} ${chartHeight + 30}" preserveAspectRatio="none">
+          <!-- Horizontal Grid Lines -->
+          <line x1="0" y1="0" x2="${chartWidth}" y2="0" stroke="#E3E8E2" stroke-dasharray="3,3" />
+          <line x1="0" y1="${chartHeight * 0.5}" x2="${chartWidth}" y2="${chartHeight * 0.5}" stroke="#E3E8E2" stroke-dasharray="3,3" />
+          <line x1="0" y1="${chartHeight}" x2="${chartWidth}" y2="${chartHeight}" stroke="#E3E8E2" />
+
+          ${barsSvg}
+        </svg>
+      `;
+    }
+
+    function renderRecentActivity() {
+      const tbody = document.getElementById('recentActivityBody');
+      if (!tbody) return;
+
+      const listings = AnnaLinkData.getListings().slice(0, 5);
+
+      if (listings.length === 0) {
+        tbody.innerHTML = `
+          <tr>
+            <td colspan="6" style="text-align: center; padding: 32px; color: var(--color-text-muted);">
+              No surplus activity recorded yet.
+            </td>
+          </tr>
+        `;
+        return;
+      }
+
+      tbody.innerHTML = listings.map(l => {
+        let badgeClass = 'badge-neutral';
+        if (l.status === 'Open') badgeClass = 'badge-open';
+        else if (l.status === 'Collected') badgeClass = 'badge-collected';
+        else if (l.status === 'Awaiting pickup' || l.status === 'Accepted') badgeClass = 'badge-accepted';
+        else if (l.status === 'Cancelled' || l.status === 'Expired') badgeClass = 'badge-cancelled';
+
+        const receiverName = l.matchedOrgName || '<span style="color:var(--color-text-light);">Awaiting selection</span>';
+        const deadlineFormatted = Formatters.datetime(l.deadline);
+
+        return `
+          <tr>
+            <td>
+              <div style="font-weight: 600; color: var(--color-text-main);">${l.title}</div>
+              <div style="font-size: 11.5px; color: var(--color-text-light);">${l.category}</div>
+            </td>
+            <td><strong>${l.quantityOffered} ${l.unit}</strong></td>
+            <td><span class="badge ${badgeClass}">${l.status}</span></td>
+            <td>${receiverName}</td>
+            <td style="font-size: 12.5px; color: var(--color-text-muted);">${deadlineFormatted}</td>
+            <td>
+              <a href="connect.html" class="btn btn-outline btn-sm">Manage</a>
+            </td>
+          </tr>
+        `;
+      }).join('');
+    }
+
+    function renderPipelineSummary() {
+      const container = document.getElementById('pipelineSummaryWrap');
+      if (!container) return;
+
+      const listings = AnnaLinkData.getListings();
+      const openCount = listings.filter(l => l.status === 'Open').length;
+      const inProgressCount = listings.filter(l => ['Accepted', 'Awaiting pickup', 'Awaiting confirmation'].includes(l.status)).length;
+      const collectedCount = listings.filter(l => l.status === 'Collected').length;
+
+      container.innerHTML = `
+        <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 12px;background:var(--color-mint-light);border-radius:var(--radius-md);">
+          <span style="font-size:13px;font-weight:500;color:var(--color-text-main);">Mutually Collected</span>
+          <span class="badge badge-collected" style="font-size:13px;font-weight:700;">${collectedCount} lots (142 kg)</span>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 12px;background:var(--color-warning-bg);border-radius:var(--radius-md);">
+          <span style="font-size:13px;font-weight:500;color:var(--color-text-main);">Accepted / In Transit</span>
+          <span class="badge badge-accepted" style="font-size:13px;font-weight:700;">${inProgressCount} lot (24 kg)</span>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 12px;background:var(--color-info-bg);border-radius:var(--radius-md);">
+          <span style="font-size:13px;font-weight:500;color:var(--color-text-main);">Open Listings</span>
+          <span class="badge badge-open" style="font-size:13px;font-weight:700;">${openCount} lot (8 kg)</span>
+        </div>
+      `;
+    }
+
+    function renderFlaggedIngredients() {
+      const container = document.getElementById('expiringIngredientsList');
+      if (!container) return;
+
+      const ingredients = AnnaLinkData.getIngredients();
+      container.innerHTML = ingredients.map(ing => `
+        <div style="display:flex;align-items:center;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--color-border);">
+          <div>
+            <div style="font-size:13.5px;font-weight:600;color:var(--color-text-main);">${ing.name}</div>
+            <div style="font-size:12px;color:var(--color-text-muted);">${ing.quantity} ${ing.unit} available</div>
+          </div>
+          <span class="badge badge-accepted">${ing.useWithin}</span>
+        </div>
+      `).join('');
+    }
+  </script>
+</body>
+
+</html>

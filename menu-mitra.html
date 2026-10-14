@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MenuMitra AI — Ingredient Waste Prevention | AnnaLink</title>
+  <meta name="description" content="Generate high-margin kitchen menu suggestions from expiring ingredients before avoidable food waste occurs.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <a href="index.html" class="brand-link">
+          <div class="brand-logo-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
+              <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
+            </svg>
+          </div>
+          <div class="brand-text">
+            <span class="brand-title">AnnaLink</span>
+            <span class="brand-tagline">Connecting Food. Reducing Waste.</span>
+          </div>
+        </a>
+      </div>
+
+      <nav class="sidebar-nav">
+        <div class="nav-section-title">Operations</div>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="3" width="7" height="9" rx="1"></rect><rect x="14" y="3" width="7" height="5" rx="1"></rect><rect x="14" y="12" width="7" height="9" rx="1"></rect><rect x="3" y="16" width="7" height="5" rx="1"></rect></svg>
+              <span>Overview</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="menu-mitra.html" class="nav-link active">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path></svg>
+              <span>MenuMitra AI</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="connect.html" class="nav-link">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+              <span>AnnaLink Connect</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="impact.html" class="nav-link">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path></svg>
+              <span>Impact</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="settings.html" class="nav-link">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+              <span>Settings</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="sidebar-footer">
+        <a href="settings.html" class="business-profile-card">
+          <div class="business-avatar">GB</div>
+          <div class="business-info">
+            <div class="business-name">Green Bowl Kitchen</div>
+            <div class="business-role">
+              <span class="status-dot"></span>
+              <span>Hirapur, Dhanbad</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main Wrapper -->
+    <div class="main-wrapper">
+      <header class="top-header">
+        <div class="header-left">
+          <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle navigation menu">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          </button>
+          <div class="header-title-wrap">
+            <div class="header-breadcrumb">Kitchen Operations / MenuMitra AI</div>
+            <h1>MenuMitra AI</h1>
+          </div>
+        </div>
+
+        <div class="header-right">
+          <!-- Notification Bell -->
+          <div class="notification-container">
+            <button class="icon-button" id="notifBtn" aria-label="Notifications">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+              <span class="notification-badge" id="notifBadge" style="display:none;">0</span>
+            </button>
+            <div class="dropdown-menu" id="notifMenu">
+              <div class="dropdown-header">
+                <h4>Notifications</h4>
+                <button type="button" id="markReadBtn">Mark all as read</button>
+              </div>
+              <div class="dropdown-body" id="notifList"></div>
+            </div>
+          </div>
+
+          <a href="settings.html" class="header-profile-btn">
+            <div class="header-avatar">GB</div>
+            <span class="header-user-name">Green Bowl Kitchen</span>
+          </a>
+        </div>
+      </header>
+
+      <main class="content-area">
+        <div class="page-intro">
+          <div class="page-intro-text">
+            <h2>MenuMitra AI</h2>
+            <p>Make better use of the ingredients already in your kitchen.</p>
+          </div>
+          <div style="display:flex;align-items:center;gap:12px;">
+            <div id="engineStatusIndicator" style="display:inline-flex;align-items:center;gap:6px;font-size:13px;padding:6px 12px;background:#FFFFFF;border:1px solid var(--color-border);border-radius:var(--radius-full);">
+              <span class="status-dot"></span>
+              <span>Suggestions ready</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Visual Hero Banner with Smart Kitchen Illustration -->
+        <div class="illustration-banner">
+          <div class="illustration-banner-content">
+            <h2>Prevent Avoidable Ingredient Loss with Recipe Intelligence</h2>
+            <p>Input your remaining daily inventory, batch ends, or surplus produce. MenuMitra cross-references your ingredients with high-velocity dining favorites to maximize plate margins before ingredients spoil.</p>
+            <div style="display:flex;gap:12px;flex-wrap:wrap;">
+              <span class="reporting-badge" style="background:#FFFFFF;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Active Kitchen Plan: Starter
+              </span>
+              <a href="#subscriptionPlans" class="btn btn-secondary btn-sm">View Plan Tiers</a>
+            </div>
+          </div>
+          <div class="illustration-banner-image">
+            <img src="assets/chef-recipe-ai.jpg" alt="Chef using MenuMitra AI smart recipe suggestion interface" loading="lazy">
+          </div>
+        </div>
+
+        <!-- Mandatory Professional Safe-Use Notice -->
+        <div class="notice-box">
+          <svg class="notice-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+          <div>
+            <strong>Operational Advisory:</strong> Suggestions and cost estimates are indicative. Review ingredient quality, food-safety requirements, recipe suitability and actual costs before use. The kitchen team retains full control over final menu additions and promotions.
+          </div>
+        </div>
+
+        <!-- Top Setup: Ingredients Input & Active Inventory -->
+        <div class="dashboard-layout" style="margin-bottom:var(--space-8);">
+          <!-- Add Ingredient Form -->
+          <div class="card" style="margin-bottom:0;">
+            <div class="card-header">
+              <div class="card-header-left">
+                <h3>Add Kitchen Ingredient</h3>
+                <p>Register ingredient surplus or items requiring prompt utilization</p>
+              </div>
+            </div>
+            <div class="card-body">
+              <form id="addIngredientForm">
+                <div class="form-row">
+                  <div class="form-group" style="flex:2;">
+                    <label class="form-label" for="ingName">Ingredient Name *</label>
+                    <input type="text" class="form-control" id="ingName" placeholder="e.g. Tomatoes, Paneer, Spinach" required>
+                  </div>
+                  <div class="form-group" style="flex:1;">
+                    <label class="form-label" for="ingQty">Quantity *</label>
+                    <input type="number" step="0.1" min="0.1" class="form-control" id="ingQty" placeholder="e.g. 2.5" required>
+                  </div>
+                  <div class="form-group" style="flex:1;">
+                    <label class="form-label" for="ingUnit">Unit</label>
+                    <select class="form-control" id="ingUnit">
+                      <option value="kg">kg</option>
+                      <option value="g">grams</option>
+                      <option value="pcs">pieces</option>
+                      <option value="bunches">bunches</option>
+                      <option value="litres">litres</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label class="form-label" for="ingUseWithin">Time Remaining</label>
+                    <select class="form-control" id="ingUseWithin">
+                      <option value="Use today">Use today</option>
+                      <option value="Use within 24 hours">Use within 24 hours</option>
+                      <option value="Use within 48 hours">Use within 48 hours</option>
+                      <option value="Use within 3 days">Use within 3 days</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="ingCategory">Dish Category</label>
+                    <select class="form-control" id="ingCategory">
+                      <option value="Fresh Produce">Fresh Produce</option>
+                      <option value="Dairy">Dairy</option>
+                      <option value="Bakery & Grains">Bakery & Grains</option>
+                      <option value="Prepared Meals">Prepared Meals</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="ingDietary">Dietary Type</label>
+                    <select class="form-control" id="ingDietary">
+                      <option value="Vegetarian">Vegetarian</option>
+                      <option value="Vegan">Vegan</option>
+                      <option value="Non-Vegetarian">Non-Vegetarian</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label class="form-label" for="ingTargetPrice">
+                      Target Selling Price <span class="form-label-optional">(Optional ₹)</span>
+                    </label>
+                    <input type="number" min="10" step="5" class="form-control" id="ingTargetPrice" placeholder="e.g. 180">
+                  </div>
+                  <div class="form-group" style="display:flex;align-items:flex-end;">
+                    <button type="submit" class="btn btn-secondary" style="width:100%;height:40px;" id="btnAddIngredient">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                      Add to Active List
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <!-- Active Ingredients List & Generation Trigger -->
+          <div class="card" style="margin-bottom:0;display:flex;flex-direction:column;">
+            <div class="card-header">
+              <div class="card-header-left">
+                <h3>Active Ingredients</h3>
+                <p>Items analyzed by the local suggestion engine</p>
+              </div>
+              <span class="badge badge-collected" id="ingredientCountBadge">4 active</span>
+            </div>
+            <div class="card-body" style="flex:1;overflow-y:auto;max-height:280px;" id="ingredientChipsContainer">
+              <!-- Rendered via JS -->
+            </div>
+            <div class="card-footer" style="flex-direction:column;gap:12px;">
+              <div style="display:flex;gap:12px;width:100%;">
+                <div style="flex:1;">
+                  <select class="form-control" id="filterCategory" style="font-size:13px;height:38px;">
+                    <option value="all">All Dish Categories</option>
+                    <option value="Main Course">Main Course</option>
+                    <option value="Appetizer / Snack">Appetizer / Snack</option>
+                    <option value="Soup">Soup</option>
+                    <option value="Breakfast / Quick Bites">Breakfast / Quick Bites</option>
+                  </select>
+                </div>
+                <div style="flex:1;">
+                  <select class="form-control" id="filterDietary" style="font-size:13px;height:38px;">
+                    <option value="all">All Dietary Preferences</option>
+                    <option value="Vegetarian">Vegetarian Only</option>
+                    <option value="Vegan">Vegan Only</option>
+                  </select>
+                </div>
+              </div>
+              <button type="button" class="btn btn-primary" style="width:100%;" id="btnGenerateSuggestions">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path></svg>
+                Generate Dish Suggestions
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section: Suggestions Grid -->
+        <div style="margin-bottom:var(--space-4);display:flex;align-items:center;justify-content:space-between;">
+          <div>
+            <h2>Suggested Kitchen Creations</h2>
+            <p>High-demand menu ideas matched to your available inventory</p>
+          </div>
+        </div>
+
+        <div class="suggestions-grid" id="suggestionsGrid">
+          <!-- Rendered dynamically by js/menu-mitra.js -->
+        </div>
+
+        <!-- Section: MenuMitra AI Subscription Plan Chart -->
+        <section class="pricing-section" id="subscriptionPlans">
+          <div class="pricing-header">
+            <h2>MenuMitra AI Subscription Plans</h2>
+            <p>Flexible software tiers for independent dining kitchens, high-velocity casual restaurants, and multi-outlet hospitality chains.</p>
+          </div>
+
+          <div class="pricing-grid">
+            <!-- Plan 1: Kitchen Starter -->
+            <div class="pricing-card">
+              <div class="pricing-plan-name">Kitchen Starter</div>
+              <div class="pricing-plan-desc">Essential inventory intelligence for single-kitchen daily waste prevention.</div>
+              <div class="pricing-price-wrap">
+                <span class="pricing-currency">₹</span>
+                <span class="pricing-amount">0</span>
+                <span class="pricing-period">/ month (Included)</span>
+              </div>
+              <ul class="pricing-features-list">
+                <li class="pricing-feature-item">
+                  <div class="pricing-feature-icon">✓</div>
+                  <span>Up to 5 simultaneous ingredients</span>
+                </li>
+                <li class="pricing-feature-item">
+                  <div class="pricing-feature-icon">✓</div>
+                  <span>Core Indian kitchen recipe catalog</span>
+                </li>
+                <li class="pricing-feature-item">
+                  <div class="pricing-feature-icon">✓</div>
+                  <span>Indicative food cost & gross margin %</span>
+                </li>
+                <li class="pricing-feature-item">
+                  <div class="pricing-feature-icon">✓</div>
+                  <span>Daily specials promotional copy generator</span>
+                </li>
+                <li class="pricing-feature-item">
+                  <div class="pricing-feature-icon">✓</div>
+                  <span>Direct AnnaLink Connect surplus handoff</span>
+                </li>
+                <li class="pricing-feature-item disabled">
+                  <div class="pricing-feature-icon disabled">✕</div>
+                  <span>Automated WhatsApp guest broadcast</span>
+                </li>
+                <li class="pricing-feature-item disabled">
+                  <div class="pricing-feature-icon disabled">✕</div>
+                  <span>Multi-outlet inventory synchronization</span>
+                </li>
+              </ul>
+              <button type="button" class="btn btn-outline pricing-btn" disabled>
+                Current Active Plan
+              </button>
+            </div>
+
+            <!-- Plan 2: Kitchen Pro (Featured) -->
+            <div class="pricing-card featured">
+              <span class="pricing-featured-badge">Recommended</span>
+              <div class="pricing-plan-name">Kitchen Pro</div>
+              <div class="pricing-plan-desc">Advanced recipe optimization, real-time margin tuning, and automated diner specials outreach.</div>
+              <div class="pricing-price-wrap">
+                <span class="pricing-currency">₹</span>
+                <span class="pricing-amount">1,499</span>
+                <span class="pricing-period">/ month</span>
+              </div>
+              <ul class="pricing-features-list">
+                <li class="pricing-feature-item">
+                  <div class="pricing-feature-icon">✓</div>
+                  <span><strong>Unlimited</strong> kitchen ingredients</span>
+                </li>
+                <li class="pricing-feature-item">
+                  <div class="pricing-feature-icon">✓</div>
+                  <span>500+ Regional Indian & Continental recipes</span>
+                </li>
+                <li class="pricing-feature-item">
+                  <div class="pricing-feature-icon">✓</div>
+                  <span>Dynamic plate margin & price-elasticity calculator</span>
+                </li>
+                <li class="pricing-feature-item">
+                  <div class="pricing-feature-icon">✓</div>
+                  <span>One-click WhatsApp & POS daily specials format</span>
+                </li>
+                <li class="pricing-feature-item">
+                  <div class="pricing-feature-icon">✓</div>
+                  <span>12-hour urgent expiration alerts for cook line</span>
+                </li>
+                <li class="pricing-feature-item">
+                  <div class="pricing-feature-icon">✓</div>
+                  <span>Priority donor matching on AnnaLink Connect</span>
+                </li>
+                <li class="pricing-feature-item disabled">
+                  <div class="pricing-feature-icon disabled">✕</div>
+                  <span>Centralized multi-outlet inventory sync</span>
+                </li>
+              </ul>
+              <button type="button" class="btn btn-primary pricing-btn" onclick="selectPricingPlan('Kitchen Pro')">
+                Upgrade to Kitchen Pro
+              </button>
+            </div>
+
+            <!-- Plan 3: Multi-Outlet / Enterprise -->
+            <div class="pricing-card">
+              <div class="pricing-plan-name">Enterprise Chain</div>
+              <div class="pricing-plan-desc">Centralized multi-kitchen control, custom prep sheets, and POS/ERP integrations.</div>
+              <div class="pricing-price-wrap">
+                <span class="pricing-currency">₹</span>
+                <span class="pricing-amount">3,999</span>
+                <span class="pricing-period">/ outlet / mo</span>
+              </div>
+              <ul class="pricing-features-list">
+                <li class="pricing-feature-item">
+                  <div class="pricing-feature-icon">✓</div>
+                  <span>All Kitchen Pro features included</span>
+                </li>
+                <li class="pricing-feature-item">
+                  <div class="pricing-feature-icon">✓</div>
+                  <span>Multi-location kitchen inventory sync</span>
+                </li>
+                <li class="pricing-feature-item">
+                  <div class="pricing-feature-icon">✓</div>
+                  <span>Custom chef recipe catalog & secret formulas</span>
+                </li>
+                <li class="pricing-feature-item">
+                  <div class="pricing-feature-icon">✓</div>
+                  <span>Petpooja, POSist & UrbanPiper integration</span>
+                </li>
+                <li class="pricing-feature-item">
+                  <div class="pricing-feature-icon">✓</div>
+                  <span>FSSAI waste compliance & ESG audit reports</span>
+                </li>
+                <li class="pricing-feature-item">
+                  <div class="pricing-feature-icon">✓</div>
+                  <span>Dedicated food-tech operations manager</span>
+                </li>
+                <li class="pricing-feature-item">
+                  <div class="pricing-feature-icon">✓</div>
+                  <span>Custom procurement SLAs & staff training</span>
+                </li>
+              </ul>
+              <button type="button" class="btn btn-secondary pricing-btn" onclick="selectPricingPlan('Enterprise Chain')">
+                Contact Operations
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <!-- Modal: Edit Promotional Message -->
+  <div class="modal-overlay" id="editPromoModal">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3 id="promoModalTitle">Edit Promotional Message</h3>
+        <button type="button" class="modal-close-btn" data-close-modal="editPromoModal">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div style="font-size:13px;font-weight:600;color:var(--color-text-main);margin-bottom:6px;" id="promoModalDishTitle">Dish Name</div>
+        <div class="form-group">
+          <label class="form-label" for="editPromoTextarea">Promotional Copy (for staff, specials board, or messaging)</label>
+          <textarea class="form-control" id="editPromoTextarea" rows="4"></textarea>
+        </div>
+        <p style="font-size:12px;color:var(--color-text-muted);">
+          Tip: Highlight fresh ingredient preparation and limited meal-window availability to encourage swift table orders.
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline btn-sm" data-close-modal="editPromoModal">Cancel</button>
+        <button type="button" class="btn btn-primary btn-sm" id="btnSavePromoModal">Save Changes</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Dish Details Breakdown -->
+  <div class="modal-overlay" id="dishDetailModal">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3 id="detailModalTitle">Dish Recipe Specification</h3>
+        <button type="button" class="modal-close-btn" data-close-modal="dishDetailModal">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+      <div class="modal-body" id="detailModalBody">
+        <!-- Filled dynamically -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary btn-sm" data-close-modal="dishDetailModal">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="toastContainer" class="toast-container"></div>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/menu-mitra.js"></script>
+</body>
+</html>
